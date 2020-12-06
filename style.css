@@ -7,9 +7,10 @@ body {
     hsl(240, 73%, 65%)
   );
   color: hsl(238, 29%, 16%);
-  font-size: 1em;
+  font-size: 0.9em;
   font-family: 'Kumbh Sans', sans-serif;
 }
+
 #container {
   display: flex;
   justify-content: center;
@@ -18,51 +19,61 @@ body {
   width: 1000px;
   height: 500px;
   margin: 7em auto;
-}
-
-#left {
-  width: 40%;
-  padding-right: 100px;
   overflow: hidden;
 }
 
-#right {
-  width: 60%;
-  padding: 50px 50px;
+#col1 {
+  width: 35%;
+  padding-right: 75px;
+}
+
+#col2 {
+  width: 65%;
+  padding: 50px 75px;
   overflow: scroll;
 }
 
 .bg {
   position: relative;
-  width: 60em;
+  width: 66em;
   left: -550px;
-  top: -850px;
+  top: -835px;
   z-index: 0;
 }
 
 .woman {
   position: relative;
-  top: -7em;
-  left: -4.5em;
+  top: -7.5em;
+  left: -5.5em;
   z-index: 1;
 }
 
 .box {
   position: relative;
-  top: 13.5em;
-  left: -5.75em;
+  top: 15em;
+  left: -6.5em;
   z-index: 2;
+}
+
+h1 {
+  margin-bottom: 25px;
 }
 
 .accordion {
   padding: 5px 15px 5px 0px;
 }
 
-.line {
+.accordion:hover {
+  color: hsl(14, 88%, 65%);
+  cursor: pointer;
+}
+
+.divider {
   width: 100%;
   height: 1px;
   background-color: hsl(240, 5%, 91%);
 }
+
 .arrow-down {
   float: right;
 }
@@ -82,6 +93,53 @@ body {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+
+
+/* Media Queries */
+@media (max-width: 500px) {
+  #container {
+    flex-direction: column;
+    width: 330px;
+    height: auto;
+    margin: 10em auto 5em;
+    overflow: visible;
+  }
+
+  #col1 {
+    width: 75%;
+    height: 110px;
+    overflow: visible;
+  }
+
+  #col2 {
+    width: 105%;
+    padding: 0px;
+  }
+
+  .mobile {
+    padding: 0 25px 40px 25px;
+  }
+  .woman {
+    width: 93%;
+    left: 50px;
+    top: -200px;
+  }
+  .box {
+    width: 90px;
+    left: 45px;
+    top: -45px;
+  }
+  .bg {
+    width: 17em;
+    left: 45px;
+    top: -415px;
+  }
+  h1 {
+    text-align: center;
+  }
 }

@@ -6,7 +6,7 @@ for (let i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function () {
         this.classList.toggle("active");
         
-    // Toggle panel class
+    // Toggle panel
     let panel = this.nextElementSibling;
     if (panel.style.display === "block") {
         panel.style.display = "none";
@@ -16,7 +16,7 @@ for (let i = 0; i < acc.length; i++) {
         arrow[i].style.transform = 'rotate(180deg)';
     }
 
-    // Max-height
+    // Transition Panel
     if (panel.style.maxHeight) {
         panel.style.maxHeight = null;
     } else {
